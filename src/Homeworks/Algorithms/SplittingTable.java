@@ -81,18 +81,18 @@ public class SplittingTable {
         System.out.print(out);
     }
 
-    private static Answer pick(Answer cur, Answer cand) {
-        if (cand == null) return cur;
-        if (cur == null) return cand;
+    private static Answer pick(Answer cur, Answer caned) {
+        if (caned == null) return cur;
+        if (cur == null) return caned;
 
-        if (cand.diff < cur.diff) return cand;
-        if (cand.diff > cur.diff) return cur;
+        if (caned.diff < cur.diff) return caned;
+        if (caned.diff > cur.diff) return cur;
 
-        if (cur.dir != cand.dir) {
-            return (cand.dir == 'V') ? cand : cur;
+        if (cur.dir != caned.dir) {
+            return (caned.dir == 'V') ? caned : cur;
         }
 
-        return (cand.x < cur.x) ? cand : cur;
+        return (caned.x < cur.x) ? caned : cur;
     }
 
     private static Answer bestHorizontal(long n, long m, long total) {
