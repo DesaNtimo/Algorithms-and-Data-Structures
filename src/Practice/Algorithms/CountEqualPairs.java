@@ -35,6 +35,7 @@ package Practice.Algorithms;
  *   Например, 100_000 * 100_000 выйдет за пределы int.
  * ============================================================
  */
+@SuppressWarnings("ALL")
 public class CountEqualPairs {
     public static void main(String[] args) {
         int[] a = {1, 1, 1, 1, 1, 1, 1, 1, 1};

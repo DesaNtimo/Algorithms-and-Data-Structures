@@ -36,6 +36,7 @@ import java.util.Arrays;
  * - Если массивы не отсортированы — алгоритм работать не будет.
  * ============================================================
  */
+@SuppressWarnings("ALL")
 public class HasCommonElement {
     public static void main(String[] args) {
         int[] arr = generateRandomArray(100);
@@ -65,5 +66,5 @@ public class HasCommonElement {
             arr[i] = Math.max(random, arr[i - 1]);;
         }
         return arr;
-    }                                                                             
+    }
 }

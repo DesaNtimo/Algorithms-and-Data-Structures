@@ -1,4 +1,5 @@
 package Practice.Algorithms;
+
 import java.util.Arrays;
 /**
  * ============================================================
@@ -30,6 +31,7 @@ import java.util.Arrays;
  * - Можно оптимизировать флагом swapped (если не было обменов — массив отсортирован).
  * ============================================================
  */
+@SuppressWarnings("ALL")
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {9, 5, 3, 7, 4, 56, 23, 11};

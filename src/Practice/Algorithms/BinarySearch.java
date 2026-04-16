@@ -1,4 +1,5 @@
 package Practice.Algorithms;
+
 import java.util.concurrent.ThreadLocalRandom;
 /**
  * ============================================================
@@ -27,9 +28,10 @@ import java.util.concurrent.ThreadLocalRandom;
  * Важно:
  * - Массив должен быть отсортирован.
  * - nanoTime() даёт шумные измерения (для точности — JMH).
- * - mid считаем как left + (right - left)/2 (защита от overflow).
+ * - mid считаем как left + (right - left) / 2 (защита от overflow).
  * ============================================================
  */
+@SuppressWarnings("ALL")
 public class BinarySearch {
     public static void main(String[] args) {
         int countOfElements = 20_000_000;
@@ -68,7 +70,7 @@ public class BinarySearch {
     }
 
     public static void warmUp(int[] arr,  int countOfElements) {
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 1000000; i++) {
             int random = ThreadLocalRandom.current().nextInt(1, countOfElements + 1);
             int LinearSearchIndex = linearSearch(arr, random);
             int BinarySearchIndex = binarySearch(arr, random);

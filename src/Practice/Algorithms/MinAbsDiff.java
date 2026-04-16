@@ -31,6 +31,7 @@ import java.util.concurrent.ThreadLocalRandom;
  *   Для надёжности нужно явно проверять входные данные.
  * ============================================================
  */
+@SuppressWarnings("ALL")
 public class MinAbsDiff {
     public static void main(String[] args) {
         int[] array = randomSortedArray(20);
